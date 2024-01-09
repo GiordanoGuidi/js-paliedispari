@@ -39,6 +39,18 @@ function getRandomNumber(){
    console.log('numero random', randomNumber);
    return randomNumber;
 }
+// SOMMO I DUE NUMERI
 let sum = getRandomNumber() + userNumber;
 console.log('SOMMA', sum);
-
+let message;
+// FUNZIONE CHE STABILISCE SE E' PARI O DISPARI
+function isEvenOrOdd(number){
+    if(number % 2 === 0){
+        message = 'il numero è par';
+    }else{
+        message = 'il numero è dispari';
+    }
+    return message;
+}
+isEvenOrOdd(sum);
+console.log('sono il messaggio ---', message);
