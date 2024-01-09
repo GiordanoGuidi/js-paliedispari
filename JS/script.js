@@ -1,5 +1,6 @@
+//#PALINDROMA
 // CHIEDO UNA PAROLA ALL'UTENTE CON IL PROPMPT
-const word = prompt('Dimmi una parola', 'marco').trim();
+const word = prompt('Dimmi una parola', 'marco').toLowerCase().trim();
 
 //!VALIDAZIONE
 if(!isNaN(word) || !word || word.length < 2 ){
@@ -25,3 +26,6 @@ if(!isNaN(word) || !word || word.length < 2 ){
 }
 //INVOCAZIONE FUNZIONE
 reverseWord(word);
+
+//#PARI E DISPARI
+
