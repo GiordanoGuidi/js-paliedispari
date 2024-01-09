@@ -45,10 +45,14 @@ console.log('SOMMA', sum);
 let message;
 // FUNZIONE CHE STABILISCE SE E' PARI O DISPARI
 function isEvenOrOdd(number){
-    if(number % 2 === 0){
-        message = 'il numero è par';
-    }else{
-        message = 'il numero è dispari';
+    if(number % 2 === 0 && userChoice === 'pari'){
+        message = 'il numero è pari ha vinto l\'utente';
+    }else if(number % 2 !== 0 && userChoice === 'dispari'){
+        message = 'il numero è dispari a vinto l\'utente';
+    }else if(number % 2 === 0 && userChoice === 'dispari'){
+        message = 'il numero è pari ha vinto il computer'
+    }else if(number % 2 !== 0 && userChoice === 'pari'){
+        message = 'Il numero è dispari ha vinto il computer';
     }
     return message;
 }
