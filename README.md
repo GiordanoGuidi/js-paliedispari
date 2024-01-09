@@ -19,3 +19,9 @@ Se ne avete tempo e voglia, provate a:
  raccogliere le informazioni dall'utente usando form, input, button in pagina invece che coi prompt.
 Stampare i risultati in pagina, invece che in console
 Buon lavoro e buon divertimento
+---
+# PROBLEM BREAKDOWN
+1. CHIEDO UNA PAROLA CON UN PROMPT
+2. FACCIO LA VALIDAZIONE
+3. CREO LA FUNZIONE
+4. STAMPO IN CONSOLE
