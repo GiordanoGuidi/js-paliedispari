@@ -31,30 +31,41 @@
 // CHIEDO DI SCEGLIERE UN  NUMERO DA 1 A 5 E SE PARI O DISPARI
 const userNumber = parseInt(prompt('Dimmi un numero da 1 a 5', 4));
 console.log('numero utente', userNumber);
-const userChoice = prompt('Scegli pari o dispari', 'pari').trim();
-console.log('SCELTA', userChoice);
-// FUNZIONE CHE GENERA UN NUMERO RANDOM DA 1 A 5
-function getRandomNumber(){
-   let randomNumber = Math.floor(Math.random() * 5) + 1;
-   console.log('numero random', randomNumber);
-   return randomNumber;
-}
-// SOMMO I DUE NUMERI
-let sum = getRandomNumber() + userNumber;
-console.log('SOMMA', sum);
-let message;
-// FUNZIONE CHE STABILISCE SE E' PARI O DISPARI
-function isEvenOrOdd(number){
-    if(number % 2 === 0 && userChoice === 'pari'){
-        message = 'il numero è pari ha vinto l\'utente';
-    }else if(number % 2 !== 0 && userChoice === 'dispari'){
-        message = 'il numero è dispari a vinto l\'utente';
-    }else if(number % 2 === 0 && userChoice === 'dispari'){
-        message = 'il numero è pari ha vinto il computer'
-    }else if(number % 2 !== 0 && userChoice === 'pari'){
-        message = 'Il numero è dispari ha vinto il computer';
+//! VALIDAZIONE
+if(isNaN(userNumber)|| userNumber < 1|| userNumber > 5){
+    alert('Attenzione devi inserire un numero maggiore di 1 e minore di 5');
+}else{
+    const userChoice = prompt('Scegli pari o dispari', 'pari').trim();
+    console.log('SCELTA', userChoice);
+    //! VALIDAZIONE
+    if(userChoice !== 'pari' && userChoice !== 'dispari'){
+        alert('Attenzione devi scegliere o pari o dispari');
+    }else{
+        // FUNZIONE CHE GENERA UN NUMERO RANDOM DA 1 A 5
+        function getRandomNumber(){
+           let randomNumber = Math.floor(Math.random() * 5) + 1;
+           console.log('numero random', randomNumber);
+           return randomNumber;
+        }
+        // SOMMO I DUE NUMERI
+        let sum = getRandomNumber() + userNumber;
+        console.log('SOMMA', sum);
+        let message;
+        // FUNZIONE CHE STABILISCE SE E' PARI O DISPARI
+        function isEvenOrOdd(number){
+            if(number % 2 === 0 && userChoice === 'pari'){
+                message = 'il numero è pari ha vinto l\'utente';
+            }else if(number % 2 !== 0 && userChoice === 'dispari'){
+                message = 'il numero è dispari a vinto l\'utente';
+            }else if(number % 2 === 0 && userChoice === 'dispari'){
+                message = 'il numero è pari ha vinto il computer'
+            }else if(number % 2 !== 0 && userChoice === 'pari'){
+                message = 'Il numero è dispari ha vinto il computer';
+            }
+            return message;
+        }
+        isEvenOrOdd(sum);
+        console.log('sono il messaggio ---', message);
     }
-    return message;
-}
-isEvenOrOdd(sum);
-console.log('sono il messaggio ---', message);
+
+    }
