@@ -10,7 +10,20 @@
     <!--JS-->
     <script defer src="JS/script.js"></script>
 </head>
-<body>
+<body class="d-flex justify-content-center align-items-center">
+    <form action="" class="mt-4 ms-4 w-50 text-center">
+        <!--INPUT-->
+        <div class="input-group flex-nowrap">
+            <input type="number" class="form-control" placeholder="Numero" aria-label="Numero" aria-describedby="addon-wrapping" min="1" max="5">
+          </div>
+        <!--SELECT-->
+          <select class="form-select mt-2" aria-label="Default select example">
+            <option selected>Scegli pari o dispari</option>
+            <option value="1">Pari</option>
+            <option value="2">Dispari</option>
+          </select>
+          <button type="button" class="btn btn-primary mt-2">Gioca</button>
+    </form>
     
 </body>
 </html>
