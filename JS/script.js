@@ -1,10 +1,9 @@
 //#PALINDROMA
 const formElement = document.querySelector('form');
 const inputElement = document.querySelector('input');
-console.log(formElement,inputElement)
 const paragraph = document.getElementById('paragraph');
 
-
+//CREO UN EVENT LISTNER SUL FORM
 formElement.addEventListener('submit',(e) =>{
     e.preventDefault(formElement);
     const word = inputElement.value.trim();
@@ -62,30 +61,23 @@ formElement.addEventListener('submit',(e) =>{
 // const formElement = document.querySelector('form');
 // const inputElement = document.querySelector('input');
 // const selectElement = document.querySelector('select');
-// console.log(formElement,inputElement,selectElement)
 // const messageElement = document.getElementById('message');
 //CREO ADD EVENT LISTNER SUL FORM
 // formElement.addEventListener('submit', (event)=>{
 //     event.preventDefault();
     //RECUPERO VALORE DELL'INPUT
     // const inputValue = parseInt(inputElement.value);
-    // console.log('valore input', inputValue)
     // if(inputValue < 1 || inputValue > 5 || isNaN(inputValue)){
     //     alert ('Devi inserire un numero compreso tra 1 e 5');
     // }else{
         //RECUPERO VALORE DELLA SELECT
 //         const userChoice = selectElement.value;
-//         console.log('valore select', userChoice)
         //INVOCO LA FUNZIONE CHE GENERA IL NUMERO RANDOM
 //         const randomNumber = getRandomNumber(1,5);
-//         console.log('numero random', randomNumber)
         // SOMMO IL NUMERO DELL'UTENTE E IL RANDOM NUMBER
 //         const sum = randomNumber + inputValue;
-//         console.log('sono la somma', sum)
         // dichiaro la funzione che determina se la somma è pari o dispari
 //         const rightChoice = isEven(sum) ? 'pari' : 'dispari'
-//         console.log(rightChoice);
-//         console.log('sono da capitalizzare',userChoice);
 //         const capitalizedUserChoice =  capitalizeFirstLetter(userChoice);
         //CREO UNA CONDIZIONE PER DICHIARARE CHI HA VINTO
 //         if(userChoice === rightChoice){
